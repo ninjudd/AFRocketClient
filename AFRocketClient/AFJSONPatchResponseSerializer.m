@@ -96,7 +96,7 @@
             NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:exception.userInfo];
             userInfo[NSLocalizedDescriptionKey] = exception.name;
             userInfo[NSLocalizedFailureReasonErrorKey] = exception.reason;
-            *error = [[NSError alloc] initWithDomain:AFNetworkingErrorDomain code:0 userInfo:userInfo];
+            *error = [[NSError alloc] initWithDomain:AFURLResponseSerializationErrorDomain code:0 userInfo:userInfo];
         }
 
         return nil;
